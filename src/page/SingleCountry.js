@@ -77,7 +77,7 @@ function SingleCountry() {
       </div>
       <Container>
         <div className="img-container">
-          <img src={flag} alt="name" />
+          <img src={flag} alt="name" className="country-flag" />
         </div>
         <CountryInfo>
           <h3 className="title">{name}</h3>
@@ -114,7 +114,7 @@ function SingleCountry() {
           </Infos>
           <div className="border-country">
             <p>Border Countries:</p>
-            <div className="container">
+            <div>
               {borders &&
                 borders.map((item, index) => {
                   return (
@@ -169,9 +169,18 @@ const Container = styled.article`
   .img-container {
     max-width: 500px;
 
-    img {
+    .country-flag {
       width: 100%;
+      object-fit: cover;
     }
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media (min-width: 800px) {
+    grid-gap: 2rem;
   }
 `
 
@@ -226,7 +235,10 @@ const CountryInfo = styled.article`
 const Infos = styled.main`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 `
 
 export default SingleCountry
