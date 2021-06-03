@@ -1,0 +1,45 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* ************** */
+/* Variables */
+:root {
+  /* --dark-blue: hsl(209, 23%, 22%);
+  --dark-blue-mode-bcg: hsl(207, 26%, 17%);
+  --very-dark-blue: hsl(200, 15%, 8%); */
+  --dark-gray: hsl(0, 0%, 52%);
+  /* --light-gray-mode-bcg: hsl(0, 0%, 98%);
+  --white-clr: hsl(0, 0%, 100%); */
+}
+
+.dark-theme {
+  --clr-bcg: hsl(207, 26%, 17%);
+  --clr-font: hsl(0, 0%, 100%);
+  --clr-elements: hsl(0, 0%, 98%);
+  --clr-card-bcg: hsl(209, 23%, 22%);
+}
+
+.light-theme {
+  --clr-bcg: hsl(0, 0%, 98%);
+  --clr-font: hsl(200, 15%, 8%);
+  --clr-elements: hsl(209, 23%, 22%);
+  --clr-card-bcg: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  background-color: var(--clr-bcg);
+}
+
+.section-center {
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
+}
